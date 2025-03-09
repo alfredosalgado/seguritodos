@@ -21,7 +21,7 @@
   position: relative;
   width: 100%;
  
-  background-image: url('/assets/img/portada/1.jpg');
+  background-image: url('../img/portada/1.jpg');
   background-size: cover;
   background-position: center;
 }
