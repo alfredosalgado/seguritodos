@@ -39,6 +39,9 @@
   pointer-events: none; /* Permite interactuar con los elementos debajo */
 }
 
+.hp {
+  color: white;
+}
 
 .bg-ryf2 {
   background-color: #2e86bd;
@@ -449,5 +452,25 @@ body {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (min-width: 768px) {
+  .text-pc {
+    text-align: center;
+  }
+
+  .carousel-caption {
+    
+    font-size: 4vw; /* Tamaño del texto */
+   
+  }
+
+  .carousel-item img {
+    width: auto; /* O 'initial' para resetearlo */
+    height: auto;
+    object-fit: unset;
+    position: absolute;
+    transition: transform 9s ease-in-out; /* Animación suave para la escala */
   }
 }
