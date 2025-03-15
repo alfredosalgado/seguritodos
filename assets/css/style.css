@@ -20,7 +20,6 @@
 .div-con-imagen {
   position: relative;
   width: 100%;
- 
   background-image: url('../img/portada/1.jpg');
   background-size: cover;
   background-position: center;
@@ -34,6 +33,102 @@
   width: 100%;
   height: 100%;
   background-color: #3aaa35;
+  opacity: 0.5; /* Ajusta la opacidad para el efecto deseado */
+
+  pointer-events: none; /* Permite interactuar con los elementos debajo */
+}
+
+.textpoint {
+  font-size: 1.4rem;
+}
+
+.bg-etapa1 {
+  background-color: #128c7e91;
+}
+
+.bg-etapa2 {
+  background-color:#2e86bd8f;
+}
+
+.bg-etapa3 {
+  background-color:#d17d0798;
+}
+
+.alerta-cupos {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  background: red;
+  text-transform: uppercase;
+  border-radius: 10px;
+  animation: pulsar 1.5s infinite alternate, brillo 2s infinite alternate;
+  text-align: center;
+  border: 3px solid white;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+}
+
+@keyframes pulsar {
+  0% {
+      transform: scale(1);
+  }
+  100% {
+      transform: scale(1.1);
+  }
+}
+
+@keyframes brillo {
+  0% {
+      box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+      border-color: white;
+  }
+  100% {
+      box-shadow: 0 0 20px rgba(255, 255, 0, 1);
+      border-color: yellow;
+  }
+}
+
+
+
+.div-con-imagen2 {
+  position: relative;
+  width: 100%;
+ 
+  background-image: url('../img/serv.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.div-con-imagen2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #878a87;
+  opacity: 0.5; /* Ajusta la opacidad para el efecto deseado */
+
+  pointer-events: none; /* Permite interactuar con los elementos debajo */
+}
+
+.div-con-imagen3 {
+  position: relative;
+  width: 100%;
+  background-image: url('../img/serv.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.div-con-imagen3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f7fcf7;
   opacity: 0.5; /* Ajusta la opacidad para el efecto deseado */
 
   pointer-events: none; /* Permite interactuar con los elementos debajo */
@@ -361,6 +456,37 @@ html, body {
 .btn-agenda:hover {
   background-color: #128C7E; /* Color más oscuro al pasar el mouse */
   transform: scale(1.05); /* Pequeño efecto de agrandamiento */
+}
+
+
+.btn-serv {
+  display: inline-block;
+ border: 2px solid #128C7E;
+  color: rgb(10, 0, 0);
+  padding: 12px 20px;
+  margin:auto;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-serv:hover {
+  background-color: #128C7E; /* Color más oscuro al pasar el mouse */
+  transform: scale(1.05); /* Pequeño efecto de agrandamiento */
+}
+
+.texth {
+  height: 10rem;
+}
+
+.card2 {
+  background-color: rgba(255, 255, 255, 0.863);
+}
+
+.card:hover {
+  background-color: white;
 }
 
 a {
