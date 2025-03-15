@@ -600,3 +600,21 @@ body {
     transition: transform 9s ease-in-out; /* Animación suave para la escala */
   }
 }
+
+@media (min-width: 425px) {
+  .texth {
+    height: 7rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .texth {
+    height: 9rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .texth {
+    height: 6.5rem;
+  }
+}
