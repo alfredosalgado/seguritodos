@@ -211,6 +211,7 @@
   top: 0;
   left: 0;
   transition: transform 9s ease-in-out; /* Animación suave para la escala */
+  pointer-events: none;
 }
 
 /* Aplicamos la animación solo a la imagen activa */
@@ -240,6 +241,80 @@
 }
 /*------------------------------------------------------*/
 
+/*BOTONES CARRUSEL */
+/* Forzar el caption a que esté centrado y sobre la imagen */
+.carousel-caption-container {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 2; /* Asegura que esté por encima de la imagen */
+}
+
+/* Sobrescribir el estilo predeterminado de Bootstrap */
+.carousel-caption.custom-caption {
+  position: static; /* Para que no herede la posición absoluta de Bootstrap */
+  display: inline-block;
+  background: transparent; /* Ajusta si deseas fondo */
+  padding: 0;
+  margin: 0 auto;
+}
+
+/* Centrar los botones y añadir separación */
+.carousel-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 15px;
+  pointer-events: auto;
+}
+
+/* Estilos para los botones */
+.carousel-buttons .btn {
+  pointer-events: auto; /* Garantiza la interactividad en cada botón */
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  z-index: 3; /* Asegura que los botones estén por encima */
+}
+
+/* Botón Servicios */
+.carousel-buttons .btn-primary {
+  background-color: transparent;
+  border: 2px solid #3aaa35;
+  border-radius: 10px; /* Esquinas redondeadas */
+  color: white;
+}
+
+.carousel-buttons .btn-primary:hover {
+  background-color: #3aaa35;
+}
+
+/* Botón Planes */
+.carousel-buttons .btn-secondary {
+  background-color: transparent;
+  border: 2px solid #c6c6c6;
+  border-radius: 10px; /* Esquinas redondeadas */
+  color: white;
+}
+
+.carousel-buttons .btn-secondary:hover {
+  background-color: #c6c6c6;
+}
+
+/* Si fuese necesario, asegúrate de que la imagen y su pseudo-elemento no interfieran */
+
+
+
+/*--------------------------------------------------------*/
+
+
+
 /*TEXTO BIENVENIDOS*/
 /* Estilo para el contenedor del texto */
 .carousel-caption-container {
@@ -263,8 +338,9 @@
   display: flex; /* Activa Flexbox */
   justify-content: center; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
+  flex-direction: column;
   color: white; /* Color del texto */
-  font-size: 6vw; /* Tamaño del texto */
+  font-size: 4.5vw; /* Tamaño del texto */
   font-weight: bold; /* Negrita */
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.788); /* Sombra para mejorar visibilidad */
   font-family: "barlow", serif;
@@ -477,8 +553,25 @@ html, body {
   transform: scale(1.05); /* Pequeño efecto de agrandamiento */
 }
 
+
+
+.tituloserv {
+  font-size: 1.2rem;
+  
+}
+
+.heightcont {
+  height: 7rem;
+}
+
+
+
 .texth {
-  height: 10rem;
+  display: none;
+}
+
+.widthicono {
+  width: 20%;
 }
 
 .card2 {
@@ -569,6 +662,19 @@ body {
   height: 100%;
 }
 
+.circular-image {
+  width: 250px;  /* Define un ancho */
+  height: 250px; /* Define la misma altura para que sea un círculo */
+  border-radius: 50%; /* Convierte la imagen en un círculo */
+  object-fit: cover; /* Recorta la imagen para ajustarla dentro del círculo */
+}
+
+.text-presentacion {
+  font-size: 1.7rem;
+  background-color: rgba(5, 230, 35, 0.027);
+  border-radius: 15px;
+}
+
 /* Animación de aparición */
 @keyframes fadeIn2 {
   from {
@@ -588,8 +694,13 @@ body {
 
   .carousel-caption {
     
-    font-size: 4vw; /* Tamaño del texto */
+    font-size: 2vw; /* Tamaño del texto */
    
+  }
+
+  .textcarro {
+    margin: 0 auto;
+    width: 50%;
   }
 
   .carousel-item img {
@@ -608,13 +719,23 @@ body {
 }
 
 @media (min-width: 768px) {
+  
+  .tituloserv {
+    font-size: 1.2rem;
+  }
   .texth {
-    height: 9rem;
+    height: 10rem;
+    
+  }
+
+  .heightcont {
+    height: 7rem;
   }
 }
 
 @media (min-width: 1000px) {
   .texth {
     height: 6.5rem;
+    font-size: 1.2rem;
   }
 }
